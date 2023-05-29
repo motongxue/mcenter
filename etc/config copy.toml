@@ -10,12 +10,18 @@ port = "8010"
 host = "127.0.0.1"
 port = "18010"
 
+# 不需要配置
 [keyauth]
 host = "127.0.0.1"
 port = "18050"
 client_id = "xxxxxxxxxxxxxxxxxxxxxxxx"
 client_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
 
+# 配置mongodb
+# 切换到test库，如果没有则（创建集合时）会自动创建
+# use mcenter;
+# 创建用户
+# db.createUser({user: "mcenter",pwd: "123456", roles: [{role: "dbAdmin", db: "mcenter"}]});
 [mongodb]
 endpoints = ["127.0.0.1:27017"]
 username = "mcenter"
